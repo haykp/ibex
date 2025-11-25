@@ -100,6 +100,7 @@
           -mfcu -cuname design_cuname
           +define+UVM_REGEX_NO_DPI
           +define+UVM
+          -svinputport=net
           -timescale 1ns/1ps
           -writetoplevels <tb_dir>/top.list
           -l <tb_build_log>
