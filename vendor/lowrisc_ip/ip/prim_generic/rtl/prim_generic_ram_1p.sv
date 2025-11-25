@@ -54,7 +54,7 @@ module prim_generic_ram_1p import prim_ram_1p_pkg::*; #(
     // Ensure that all mask bits within a group have the same value for a write
     `ASSERT(MaskCheck_A, req_i && write_i |->
         wmask_i[k*DataBitsPerMask +: DataBitsPerMask] inside {{DataBitsPerMask{1'b1}}, '0},
-        clk_i, '0)
+        clk_i, req_i || write_i)
   end
 
   // using always instead of always_ff to avoid 'ICPD  - illegal combination of drivers' error
