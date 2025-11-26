@@ -31,7 +31,13 @@ from scripts_lib import subst_dict, subst_env_vars
 from lib import read_yaml
 
 import logging
+
 logger = logging.getLogger(__name__)
+logging.basicConfig(
+    filename="custom.log",
+    level=logging.ERROR,
+    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s"
+)
 
 parameter_format = '<{}>'
 parameter_regex = r'(<[\w]+>)'  # Find matches to the above format

@@ -1,0 +1,17 @@
+2025-11-26 13:06:28,936 [ERROR] riscvdv_interface: Parameters in riscvdv command not substituted!
+Parameters : ['<EXTRA_COSIM_CFLAGS>', '<IBEX_ROOT>']
+Command :  vlog
+  -64
+  -f /home/grigorgri/ibex/ibex/dv/uvm/core_ibex/ibex_dv.f
+  -sv
+  -mfcu -cuname design_cuname
+  +define+UVM_REGEX_NO_DPI
+  +define+UVM
+  -svinputport=net
+  -suppress 13361
+  -timescale 1ns/1ps
+  -writetoplevels /home/grigorgri/ibex/ibex/dv/uvm/core_ibex/out/build/tb/top.list
+  -l /home/grigorgri/ibex/ibex/dv/uvm/core_ibex/out/build/tb/compile_tb.log
+  +define+IBEX_CFG_RV32M=ibex_pkg::RV32MSingleCycle +define+IBEX_CFG_RV32B=ibex_pkg::RV32BOTEarlGrey +define+IBEX_CFG_RegFile=ibex_pkg::RegFileFF -f /home/grigorgri/ibex/ibex/dv/uvm/core_ibex/ibex_dv_cosim_dpi.f -ccflags '-Wl,-rpath,/opt/spike-cosim/lib -I/opt/spike-cosim/include -I/opt/spike-cosim/include/softfloat <EXTRA_COSIM_CFLAGS>' -ccflags '-I<IBEX_ROOT>/dv/cosim'
+
+
